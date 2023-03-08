@@ -1,0 +1,24 @@
+# Build output
+/out
+/bin
+/dist
+
+# mac hidden files
+.DS_Store
+
+# Eclipse files
+.classpath
+.project
+.settings
+/build
+/build-lib
+/build-beastlabs
+/build-beast
+
+#output from running xml files in eclpise
+
+*.log
+*.tree
+*.state
+*.trees
+
