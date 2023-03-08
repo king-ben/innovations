@@ -19,12 +19,12 @@ import beast.base.inference.parameter.IntegerParameter;
 import beast.base.util.Randomizer;
 
 
-@Description("Logs internal states sampled from the distribution at the MRCA of a set of taxa")
+@Description("Logs innovations on the branch leading to the MRCA of a set of taxa")
 public class InnovationLogger extends TreeLikelihood implements Loggable {
 	public Input<TaxonSet> taxonsetInput = new Input<>("taxonset", "set of taxa defining a clade. The MRCA node of the clade is logged", Validate.REQUIRED);
 	public Input<String> valueInput = new Input<>("value", "space delimited set of labels, one for each site in the alignment. Used as site label in the log file.");
-	public Input<String> fromInput = new Input<>("fromStates", "flag to indicate the parent value should be logged");
-	public Input<String> toInput = new Input<>("toStates", "flag to indicate the MRCA value should be logged");
+	public Input<String> fromInput = new Input<>("fromStates", "states that indicate the trait is absent");
+	public Input<String> toInput = new Input<>("toStates", "states that indicate the trait is present");
 	
     // array of flags to indicate which taxa are in the set
     Set<String> isInTaxaSet = new LinkedHashSet<>();
