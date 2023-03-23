@@ -32,6 +32,8 @@ public class InnovationLogger extends TreeLikelihood implements Loggable {
 	int [] parentSample;
     int [] fromState;
     int [] toState;
+    int c;
+    int d;
     
     @Override
 	public void initAndValidate() {
@@ -89,7 +91,7 @@ public class InnovationLogger extends TreeLikelihood implements Loggable {
         String[] toStateStrings = toString.split("\\s+");
         toState = new int[toStateStrings.length];
         for (int i = 0; i < toStateStrings.length; i++) {
-        	fromState[i] = parseInt(toStateStrings[i], 9);
+        	toState[i] = parseInt(toStateStrings[i], 9);
         }
     }
     
@@ -133,8 +135,8 @@ public class InnovationLogger extends TreeLikelihood implements Loggable {
 
             // generate output
             for (int i = 0; i < parentSample.length; i++) {
-                int c = parentSample[i];
-                int d = sample[i];
+                c = parentSample[i];
+                d = sample[i];
                 
                 if (contains(fromState, c)) { // check if c is in array fromState
                     if (contains(toState, d)) { // check if d is in array toState
@@ -144,6 +146,8 @@ public class InnovationLogger extends TreeLikelihood implements Loggable {
                     }else {
                     	out.append(0 + "\t");
                     }
+                }else {
+                	out.append(0 + "\t");
                 }
             }           
 			
