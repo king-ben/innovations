@@ -14,8 +14,6 @@ import beast.base.core.Loggable;
 import beast.base.evolution.alignment.TaxonSet;
 import beast.base.evolution.likelihood.TreeLikelihood;
 import beast.base.evolution.tree.Node;
-import beast.base.inference.operator.kernel.Transform.Array;
-import beast.base.inference.parameter.IntegerParameter;
 import beast.base.util.Randomizer;
 
 
