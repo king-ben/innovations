@@ -13,3 +13,8 @@ See `examples/make_innovation_blocks.R` for an example script for making the xml
 See `examples/analyse_innovations.R` for a script that analyses the output of the innovations log file.
 
 See `examples/Malekula_asr.xml` for a simple example beast2 xml file.
+
+Installing package manually
+---------------------------
+Ensure you are running at least beast 2.7.
+Download the zip file from [releases](https://github.com/king-ben/innovations/releases). Copy this zip file to the BEAST addon directory in your computer and unzip it. To find out where the addon directory is, open beauti, File - manage packages, click on the question mark in the bottom right corner. You may also need to clear the beast class path. This is possible in the file menu of beauti.
